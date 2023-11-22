@@ -1,0 +1,186 @@
+
+
+                          ** => REACT JS <= **
+				 
+				 
+				 
+	1. What is React Js?
+	
+  ans =>	 React is a JavaScript library created by Facebook
+             React is a User Interface (UI) library
+             React is a tool for building UI components
+			 
+    2.  What is NPM in React Js?
+
+  ans =>  Applications are installed using the NPM command npm install.
+          	
+	3.   What is Role of Node Js in react Js?
+
+  ans => Node utilizes Webpack and other modules to turn a React application into an easily compilable single file.
+         		  
+	4.    What is CLI command In React Js?
+
+  ans =>  js and React. The CLI will be used to create a Node.
+
+    5.    What is Components in React Js?
+
+  ans  =>  js and React. The CLI will be used to create a Node.js microservice project. It will be similar to how the create-react-app works in that you can run it using npx or just install it as a global package.
+
+    6.    What is Header and Content Components in React Js?
+ 
+  ans  =>  Headers are compositions that extend standard navbar functionalities.  or image covers which serve as a containers for extra navigation elements - usually links, forms, or call-to-action buttons.
+  
+    7.  How to install React Js on Windows, Linux Operating System? How to Install NPM and How to check version of NPM? 
+  		 
+  ans  =>    Step 1: Install npm. Login to your server as a sudo user and run the following command: sudo apt install npm. ...
+
+             Step 2: Install create-react-app Utility. create-react-app is a utility that allows you to set up all the tools required for a React application. ...
+
+             Step 3: Create and Launch Your First React Application.		   
+	
+	8.  How to check version of React Js?
+	
+  ans  =>   Locate the root directory of your React Native project.
+  
+            Open the package. json file in a text editor.
+			
+            Look for the "react-native" key within the "dependencies" section.
+
+            The value corresponding to "react-native" key represents the React Native version used in your project.
+	
+	9.  How to change in components of React Js?
+	
+  ans  =>   Pass the 'text' state to the JSX element using '{state. text}' method.
+            Update the state on a specific event like button click using the 'setState' method. 
+
+   10.  How to Create a List View in React Js?
+   
+  ans  =>    
+  
+      => * use.Arry.map
+  
+       let new_array = arr.map(function callback( currentValue[, index[, array]])
+	   {  return element for new_array }
+		 [thisArg])
+  
+      => * not a for loop
+	  
+	       function App() {
+           return (
+           <div>
+         {
+          for(let i =0 ; i< 5 ; i++)
+             </Component>
+         }
+         </div>
+         }
+	  
+	  
+	  
+	  => * Give each item a unique key
+	  
+	       <ul>
+          {["Item1", "Item2", "Item3"].map(item =>
+         <li>{item}</li>
+           )}
+           </ul>
+	     
+	  => *  Avoid using arry index as the key
+	  
+	  
+	  
+	  import React from 'react';
+
+     const NameList = ({ names }) => {
+     return (
+     <ul>
+      {names.map((name, index) => (
+        <li key={index}>{name}</li>
+      ))}
+     </ul>
+      );
+     };
+
+export default NameList;
+  
+  
+
+
+
+   11.  Create Increment decrement state change by button click?
+   
+   ans =>                   
+
+import React from "react"
+
+class StateEx1 extends React.Component 
+{
+
+    constructor()
+    {
+        super();
+        this.state = {count:1}   
+    }
+
+    // constructor me state ki valeu count hoti he is se nomber ki valeu updet hoti he  
+
+
+    inc = ()=>{
+
+        this.setState((prev)=>(
+            {count:prev.count+1}
+        ))
+    }
+    // is function ko   increment button pe coll karvaya he is se unki valeu jo hogi usme 1++  hoti  jayegi
+
+
+    
+    dec = ()=>{
+        this.setState({count:this.state.count-1})
+    }  
+
+    // is function ko   Decrement button pe coll karvaya he is se unki valeu jo hogi usme 1--  hoti  jayegi
+
+
+    stop = ()=>{
+
+        this.setState(()=>(
+            {count:1}
+        ))
+    }         
+    // is function ko re start button pe coll karvaya he is se unki valeu 1 ho jayegi
+
+
+    render()
+    {
+        return(
+            < >
+                <div style={{marginTop:0,textAlign:"center",backgroundColor:"blue", height:700,}}>
+
+
+                <h1  style={{fontSize:100, color: "red",textShadow:"black" ,}}>{this.state.count}</h1>
+                  {/* inc dic isme prit hota hee  */}
+
+                <button style={{fontSize:30, color: "red", margin:50,}}  onClick={this.dec} >Decrement</button>
+                  {/* is button ke Click pe is ki value - hoti he  */}
+               
+                <button style={{fontSize:30, color: "red", margin:50, border:10, }} onClick={this.inc}>Increment</button>
+                    {/* is button ke Click pe is ki value + hoti he  */}
+                <br/>
+                <button style={{fontSize:30, color: "red", margin:50, border:10, }} onClick={this.stop}>Re Start</button> 
+                    {/* is button ke Click pe is ki value 1  ho jati he reset value ho jati hee  */}
+                </div>
+				
+				
+				
+			
+            </>
+        )
+    }
+}
+
+export default StateEx1;
+
+   
+  
+  

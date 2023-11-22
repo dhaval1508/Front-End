@@ -1,0 +1,186 @@
+
+@media(max-width:700px)
+{
+    .nev2
+    {
+        display: none;
+    }
+    .logo
+  {
+    width: 100%;
+    margin-left: 180px;
+  }
+.menu4
+{
+    display: block;
+    color: azure;
+}
+.nev1
+{
+  display: block;
+}
+  
+.img1
+{
+    height: 45vh;
+    width: 100%;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  background-color: #888888;
+  padding: 60px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 20px;
+}
+.QUICK
+{
+    height: 50px;
+    width: 100%;
+    background-color: rgb(71, 71, 175);
+    color: rgb(238, 155, 0);
+   
+   
+     transform: translate(0px , -250px);
+
+
+}
+
+/* <!-- <------------------------section 1 end------------------>  */
+.item1 {
+  grid-column: 1 / span 1;
+  text-align: center;
+  grid-row: 1;
+  padding-bottom: 10px;
+}
+
+.item5 {
+  grid-column: 1 / span 1;
+  grid-row: 1;
+}
+/* <!-- <------------------------section 2 end------------------>  */
+
+.properties 
+{
+    display: grid;
+    grid-template-columns: 1fr ;
+
+}
+.properties1
+{
+    margin: 20px;
+    background-color: #FFFFFF;
+    display: grid;
+    grid-template-columns: 1fr  ;
+    overflow: hidden;
+
+  }
+
+  /* <!-- <------------------------section 3 end------------------>  */
+  .welcome_ditel2 
+  {
+    display: grid;
+    grid-template-columns: 1fr ;
+    color: white;
+    row-gap: 50px;
+    column-gap: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* border: 2px solid rgb(105, 53, 53); */
+
+  }
+  .wclcome_img
+  {
+    background: rgba(0, 0, 0, 0.527);
+    color: white;
+    height: 150vh;
+    width: 100%;
+
+  }.Welcome
+  {
+    background-image: url(slide-1\ \(1\).jpg);
+    background-position: 50% 50%;
+    height: 170vh;
+    width: 100%;
+    
+  }
+  .welcome_ditel3 
+{
+   margin-left: 20%;
+   text-align: center;
+   /* padding-top: 10px; */
+}
+
+   
+    /* <!-- <------------------------section 6 end----------------  --> */
+
+    .img_news
+    {
+      display: grid;
+      grid-template-columns: 1fr;
+      width: 100%;
+      
+    }
+    .gallety_post
+    {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .gallety_img1_ditel1
+    {
+      width: 50%;
+    }
+    .gallety_img1
+    {
+      height: 80%;
+      width: 50%;
+    }
+    
+
+
+    .image_post
+    {
+      display: grid;
+      grid-template-columns: 1fr;
+      width: 100%;
+      
+    }
+    .gallety_post
+    {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+     .gallety_img1_ditel2
+    {
+      width: 50%;
+    }
+    .gallety_img2
+    {
+      height: 80%;
+      width: 50%;
+    }
+
+
+    .Partners,.li1
+    {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+
+     /* <------------------------section 7 end----------------  */ 
+
+
+     .last_div
+{
+  display: grid;
+  grid-template-columns: 1fr ;
+
+}
+
+
+
+  }

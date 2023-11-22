@@ -1,0 +1,72 @@
+1 -Are the HTML tags and elements the same thing? 
+ans - HTML Tags are building blocks of HTML Page. HTML Elements are components that are used in HTML Page.
+
+ 2- What are tags and attributes in HTML?  
+ ans -  An HTML attribute is a piece of markup language used to adjust the behavior or display of an HTML element.
+
+3- What are void elements in HTML? With Example.
+ans - an element in HTML that cannot have any child nodes
+
+
+4 - What are HTML Entities? With Example.
+ans - ("string") that begins with an ampersand ( & ) and ends with a semicolon ( ; )
+
+5 -  What are different types of lists in HTML? With Example.
+ans - <ul>	Defines an unordered list
+    <ol>	Defines an ordered list
+    <li>	Defines a list item
+    <dl>	Defines a description list
+
+6 -  What is the ‘class’ attribute in HTML? With Example.
+ans - pecifies one or more classnames for an element.
+
+7 What is the difference between the ‘id’ attribute and the ‘class’ attribute of HTML
+elements? With Example.
+ans -  A Class name can be used by multiple HTML elements, while an ID name must only be used by one HTML element within the page.
+
+8 -  What are the various formatting tags in HTML?
+ans - <b> - Bold text.
+    <strong> - Important text.
+    <i> - Italic text.
+    <em> - Emphasized text.
+    <mark> - Marked text.
+    <small> - Smaller text.
+    <del> - Deleted text.
+    <ins> - Inserted text
+
+9 -  How is Cell Padding different from Cell Spacing? With Example.
+ans - Cellpadding basically defines the space present between a table cell's border and the content present in it.
+
+10 -  How can we club two or more rows or columns into a single row or column in an HTML
+table? With Example.
+ans - use the colspan and rowspan attribute, to merge cells in HTML.
+
+11-  What is the difference between a block-level element and an inline element?
+ans -  inline elements do not force a new line to begin in the document flow. Block elements, on the other hand, typically cause a line break to occur 
+
+12 -  How to create a Hyperlink in HTML? With Example.
+ans - Use the <img> element (inside <a> ) to use an image as a link.
+
+13 - What is the use of an iframe tag? With Example.
+The <iframe> tag specifies an inline frame
+
+14 -  What is the use of a span tag? Explain with example?
+ans - to mark up a part of a text, or a part of a document.
+
+15 -  How to insert a picture into a background image of a web page? With Example.
+ans - Under the CSS <style> tag, add the property background-image.
+
+16 -  How are active links different from normal links?
+ans - An active link is underlined and red.
+
+17 -  What are the different tags to separate sections of text?
+ans - br> tag – It is used to separate the line of text. It breaks the current line and shifts the flow of the text to a new line.
+
+18 -  What is SVG?
+ans - Scalable Vector Graphics. 
+
+19 -  What is difference between HTML and XHTML?
+ans - HTML is the standard markup language for creating web pages, while XHTML is a stricter and more standardized version of HTML.
+
+20 -  What are logical and physical tags in HTML?
+ans - Physical tags are used to tell the browser how to display the text enclosed in the physical tag.

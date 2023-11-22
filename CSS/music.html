@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        body{
+            background: rgba(204, 204, 204, 0.795)
+        }
+        .men{
+            background-color: rgb(255, 255, 255);
+            height: 550px;
+            width: 330px;
+            margin: 30px auto;
+            border-radius: 20px;
+            position: absolute;
+            top: 30px;
+            left: 250px;
+            overflow: hidden;
+        }
+        .nav
+        {
+            height: 100px;
+            width: 330px;
+            text-align: center;
+            /* border: 2px solid black; */
+            position: relative;
+            top: 7px;
+            left: 7px;
+        }
+       .nav1{
+            height: 50px ;
+            width: 50px;
+            background-color: rgba(255, 255, 255, 0.815);
+            border:2px solid pink;
+            box-shadow: 5px 5px 12px black,-5px -5px 12px white ;
+
+            border-radius: 50%;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            position: absolute;
+        }
+        .nav2{
+            height: 50px ;
+            width: 50px;
+            background-color: rgba(255, 255, 255, 0.815);
+            border:2px solid pink;
+            box-shadow: 5px 5px 12px black,-5px -5px 12px white ;
+
+            border-radius: 50%;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: 255px;
+            top: 2px;
+        }
+        a
+        {
+            font-size: 20px;
+            text-align: center;
+            position: absolute;
+            top: 18px;
+            left: 100px;
+        }
+        .pic
+        {
+            height: 200px;
+            width: 200px;
+            background: url(https://economictimes.indiatimes.com/thumb/msid-100076153,width-1200,height-900,resizemode-4,imgsize-47012/arijit-singh-2.jpg?from=mdr);
+            background-size: 200px 200px;
+            border: 3px solid rgb(255, 255, 255);
+            border-radius: 50%;
+            box-shadow: 5px 5px 12px black,-5px -5px 12px white ;
+            position: absolute;
+            top: 75px;
+            left: 65px;
+
+
+        }
+        .name
+        {
+            font-size: 10px;
+            
+            position: relative;
+            top: 210px;
+            left: 130px;
+        }
+        b
+        {
+            font-size: 20px;
+            position: relative;
+            top: 0px;
+            left: 10px;
+        }
+        .nav5
+        {
+         height: 200px;
+         width: 330px;
+         /* border:2px solid rgb(0, 0, 0); */
+         position: absolute;
+         top: 380px;
+         
+        }
+        .a{
+            height: 70px ;
+            width: 70px;
+            background-color: rgba(255, 255, 255, 0.815);
+            border:2px solid pink;
+            box-shadow: 5px 5px 12px black,-5px -5px 12px white ;
+
+            border-radius: 50%;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 80px;
+            left: 20px;
+        }
+        .b{
+            height: 70px ;
+            width: 70px;
+            background-color: rgb(255, 255, 255);
+            border:12px solid rgb(17, 0, 255);
+            box-shadow: 5px 5px 12px black,-5px -5px 12px white ;
+            overflow: hidden;
+
+            border-radius: 50%;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 80px;
+            left: 130px;
+
+        }
+        .c{
+            height: 70px ;
+            width: 70px;
+            background-color: rgba(255, 255, 255, 0.815);
+            border:2px solid pink;
+            box-shadow: 5px 5px 12px black,-5px -5px 12px white ;
+
+            border-radius: 50%;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 80px;
+            left: 240px;
+
+        }
+        p {
+            position: absolute;
+            left: 285px;
+            top: -10px;
+        }
+        o {
+            position: absolute;
+            left: 10px;
+            top: 5px;
+        }
+
+
+
+
+        
+        .line1 
+        {
+            height: 4px;
+            width: 1px;
+            background-color: blue;
+            border-radius: 50px;
+            position: absolute;
+            top: 30px;
+            left: 10px;
+
+
+            animation: line1 100s linear infinite  ;
+
+        }
+        .line2
+        {
+            height: 4px;
+            width: 300px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.658) inset;
+            position: absolute;
+            top: 30px;
+            left:10px;
+        }
+        /* .point
+        {
+            height: 20px;
+            width: 20px;
+            background-color: blue;
+            border-radius: 60%;
+            border: 5px solid white;
+            position: absolute;
+            top: -7px;
+            left: 125px;
+            
+        }
+         */
+
+        @keyframes line1 
+        
+           {
+             0% {
+                height: 4px;
+            width: 1px;
+            background-color: blue;
+            border-radius: 50px;
+            position: absolute;
+            top: 30px;
+            left: 10px;
+             }
+             10% {
+                height: 4px;
+            width: 10px;
+            background-color: blue;
+            border-radius: 50px;
+            position: absolute;
+            top: 30px;
+            left: 10px;
+             }
+            50% {
+                height: 4px;
+            width: 50px;
+            background-color: blue;
+            border-radius: 50px;
+            position: absolute;
+            top: 30px;
+            left: 10px;
+             }
+             100% {
+                height: 4px;
+            width: 100px;
+            background-color: blue;
+            border-radius: 50px;
+            position: absolute;
+            top: 30px;
+            left: 10px;
+             }
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /* <--new bar statr --> */
+
+
+            .men2{
+            background-color: rgb(255, 255, 255);
+            height: 550px;
+            width: 330px;
+            margin: 30px auto;
+            border-radius: 20px;
+            position: absolute;
+            top: 50px;
+            left: 500px;
+            
+
+        }
+        .nav11
+        {
+            height: 100px;
+            width: 330px;
+            text-align: center;
+            /* border: 2px solid black; */
+            position: relative;
+            top: 7px;
+            left: 7px;
+        }
+       .nav12{
+            height: 50px ;
+            width: 50px;
+            background-color: rgb(255, 255, 255);
+            border: none;
+            border:2px solid rgb(255, 255, 255);
+            box-shadow: 5px 5px 10px black,-5px -5px 10px white ;
+
+            border-radius: 50%;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 100PX;
+        }
+       
+        
+        .nav13{
+            height: 50px ;
+            width: 50px;
+            background-color: rgba(255, 255, 255, 0.815);
+            border:2px solid rgb(255, 255, 255);
+            box-shadow: 5px 5px 10px black,-5px -5px 10px white ;
+
+            border-radius: 50%;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            left: 260px;
+            top: 100px;
+        }
+        .oi
+        {
+            font-size: 12px;
+            text-align: center;
+            position: absolute;
+            top: 10px;
+            left: 120px;
+            word-spacing: 10px;
+        }
+        .pic2
+        {
+            height: 150px;
+            width: 150px;
+            background: url(https://economictimes.indiatimes.com/thumb/msid-100076153,width-1200,height-900,resizemode-4,imgsize-47012/arijit-singh-2.jpg?from=mdr);
+            background-size: 100% 100%;
+            border: 3px solid rgb(255, 255, 255);
+            border-radius: 50%;
+            box-shadow: 5px 5px 10px black,-5px -5px 10px white ;
+            position: absolute;
+            top: 50px;
+            left: 85px;
+
+
+        }
+       .newdiv
+       {
+        position: absolute;
+        top: -20px;
+        left: 200px;
+       }
+       .div1
+       {
+        height: 50px;
+        width: 320px;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        top: 315px;
+        left: 505px;
+        border-radius: 10px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20px;
+        padding-left: 10px;
+        top: 300px;
+       
+       }
+       .div11
+       {
+       
+        color: rgba(0, 0, 0, 0.411);
+       }
+       .div111{
+            height: 30px ;
+            width: 30px;
+            background-color: rgba(255, 255, 255, 0.575);
+            border:2px solid rgb(255, 255, 255);
+            box-shadow: 5px 5px 12px black,-5px -5px 12px white ;
+
+            border-radius: 50%;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 11px;
+            left: 280px;
+            font-size: 13px;
+            
+        }
+        .div2
+       {
+        height: 50px;
+        width: 320px;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        top: 315px;
+        left: 505px;
+        border-radius: 10px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20px;
+        padding-left: 10px;
+        position: absolute;
+        top: 357px;
+       }
+       .div12
+       {
+       
+        color: rgba(0, 0, 0, 0.411);
+       }
+       .div122{
+            height: 30px ;
+            width: 30px;
+            background-color: rgba(255, 255, 255, 0.575);
+            border:2px solid rgb(255, 255, 255);
+            box-shadow: 5px 5px 12px black,-5px -5px 12px white ;
+
+            border-radius: 50%;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 11px;
+            left: 280px;
+            font-size: 13px;
+            
+        }
+        .div3
+       {
+        height: 50px;
+        width: 320px;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        top: 315px;
+        left: 505px;
+        border-radius: 10px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20px;
+        padding-left: 10px;
+        position: absolute;
+        top: 416px;
+       }
+       .div13
+       {
+       
+        color: rgba(0, 0, 0, 0.411);
+       }
+       .div133{
+            height: 30px ;
+            width: 30px;
+            background-color: rgba(255, 255, 255, 0.575);
+            border:2px solid rgb(255, 255, 255);
+            box-shadow: 5px 5px 12px black,-5px -5px 12px white ;
+
+            border-radius: 50%;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 11px;
+            left: 280px;
+            font-size: 13px;
+            
+        }
+        .div4
+       {
+        height: 50px;
+        width: 320px;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        top: 315px;
+        left: 505px;
+        border-radius: 10px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20px;
+        padding-left: 10px;
+        position: absolute;
+        top: 472px;
+       }
+       .div14
+       {
+       
+        color: rgba(0, 0, 0, 0.411);
+       }
+       .div144{
+            height: 30px ;
+            width: 30px;
+            background-color: rgba(255, 255, 255, 0.575);
+            border:2px solid rgb(255, 255, 255);
+            box-shadow: 5px 5px 12px black,-5px -5px 12px white ;
+
+            border-radius: 50%;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 11px;
+            left: 280px;
+            font-size: 13px;
+            
+        }
+        .div5
+       {
+        height: 50px;
+        width: 320px;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        top: 315px;
+        left: 505px;
+        border-radius: 10px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20px;
+        padding-left: 10px;
+        position: absolute;
+        top: 528px;
+       }
+       .div15
+       {
+       
+        color: rgba(0, 0, 0, 0.411);
+       }
+       .div155{
+            height: 30px ;
+            width: 30px;
+            background-color: rgba(255, 255, 255, 0.575);
+            border:2px solid rgb(255, 255, 255);
+            box-shadow: 5px 5px 12px black,-5px -5px 12px white ;
+
+            border-radius: 50%;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 11px;
+            left: 280px;
+            font-size: 13px;
+            
+        }
+        .div6
+       {
+        height: 38px;
+        width: 320px;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        top: 315px;
+        left: 505px;
+        border-radius: 10px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 20px;
+        padding-left: 10px;
+        position: inherit;
+        top: 584px;
+       }
+       .div16
+       {
+       
+        color: rgba(0, 0, 0, 0.411);
+       }
+       .div166{
+            height: 30px ;
+            width: 30px;
+            background-color: rgba(255, 255, 255, 0.575);
+            border:2px solid rgb(255, 255, 255);
+            box-shadow: 5px 5px 10px black,-5px -5px 12px white ;
+
+            border-radius: 50%;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 11px;
+            left: 280px;
+            font-size: 13px;
+            
+        }
+        /* .audio
+        {
+            height: 70px;
+            width: 70px;
+           background-color: black;
+           border-radius: 50%;
+           position: absolute;
+           top: 0px;
+           left: 2px;
+           
+        } */
+        .audio1
+        {
+            position: absolute;
+            top: -3px;
+            left: -2px;
+        }
+        
+        
+      
+     
+    </style>
+</head>
+<body>
+    <div class="men">
+
+        <div class="nav">
+
+            <div class="nav1"> <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </div>
+
+             <a> PLAYING NOW </a> 
+
+            <div class="nav2"> <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+            </div>
+
+
+        <div class="pic">
+              </div>
+              <div class="name">
+                 <b> Lose it </b>
+                  <br>
+                  Flume ft. Vic mensa
+                  
+              </div>
+
+
+
+        <div class="nav5">
+           <o> 1:21</o>
+           <p>2:40</p>
+
+
+
+
+
+          
+            <div class="line2"></div>
+            <div class="line1">
+                <div class="point"></div>
+
+
+
+
+           </div>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+           <!-- <div class="point"></div> -->
+            <div class="a"> <i class="fa fa-backward" aria-hidden="true"></i>
+            </div>
+
+
+
+            <div class="b" >               <audio controls src="file:///C:/Users/dhaval007/Desktop/shop%20now/1%20Min%20Music%20Video%20-%20Tera%20Hua%20-%20Arijit%20Singh%20-%20Trending%20Version%20-%20Kunaal%20Vermaa.mp3" class="audio1"></audio>
+                <div class="audio"> 
+ 
+            </div>
+                <i class="fa fa-pause" aria-hidden="true"></i>
+            </div>
+
+
+
+
+
+
+            <div class="c"> <i class="fa fa-forward" aria-hidden="true"></i>
+            </div>
+
+
+
+
+       
+       
+       
+        </div>
+            
+           
+    </div>
+
+
+    <div class="newdiv">
+    <div class="men2">
+
+        <div class="nav11">
+
+            <div class="nav12"> <i class="fa fa-heart" aria-hidden="true"></i>
+
+            </div>
+
+             <oi> SKIN FLUME </oi> 
+
+            <div class="nav13"> .....
+            </div>
+            </div>
+
+
+        <div class="pic2">
+              </div>
+              </div>
+
+
+              <div class="div1">
+                Helix <br>
+              <div class="div11">Flume</div> 
+              <div class="div111"> <i class="fa fa-play" aria-hidden="true"></i>
+
+              </div>
+  
+              </div>
+
+              <div class="div2">
+                Helix <br>
+              <div class="div12">Flume</div> 
+              <div class="div122"> <i class="fa fa-play" aria-hidden="true"></i>
+
+              </div>
+  
+              </div>
+
+
+              <div class="div3">
+                Helix <br>
+              <div class="div13">Flume</div> 
+              <div class="div133"> <i class="fa fa-play" aria-hidden="true"></i>
+
+              </div>
+  
+              </div>
+
+
+              <div class="div4">
+                Helix <br>
+              <div class="div14">Flume</div> 
+              <div class="div144"> <i class="fa fa-play" aria-hidden="true"></i>
+
+              </div>
+  
+              </div>
+
+
+              <div class="div5">
+                Helix <br>
+              <div class="div15">Flume</div> 
+              <div class="div155"> <i class="fa fa-play" aria-hidden="true"></i>
+
+              </div>
+  
+              </div>
+
+
+              <div class="div6">
+                Helix <br>
+              <div class="div16">Flume</div> 
+              <div class="div166"> <i class="fa fa-play" aria-hidden="true"></i>
+
+              </div>
+  
+              </div>
+
+
+             
+
+
+
+
+            </div>
+</body>
+</html>

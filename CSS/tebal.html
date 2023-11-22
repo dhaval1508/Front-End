@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+</head>
+<body>
+
+    
+
+    <form action="test.html" method="post">
+
+
+        <table border="3"; bordercolor="blue">
+            <tr>
+                <th colspan="4" >Registration Form</th>
+            </tr>
+    
+            <tr>
+                <td align="right">Name:</td>
+                <td>
+<!-- <input type="text" placeholder="Enter name..." required pattern="[a-zA-Z]+" title="Only Letters"> -->
+<input type="text" placeholder="Enter name..." name="nm" required pattern="[a-zA-Z]{2,9}" title="min 2 and max 5 letters...">
+                </td>
+            </tr>
+    
+            <tr>
+                <td align="right">Email:</td>
+                <td><input type="email"></td>
+            </tr>
+    
+            <tr>
+                <td align="right">Password:</td>
+                <td><input type="password" maxlength="8" name="pwd"></td>
+            </tr>
+    
+            <tr>
+                <td align="right">Mobile:</td>
+                <td><input type="text" type="number"></td>
+            </tr>
+    
+            <tr>
+                <td align="right">Date:</td>
+                <td><input type="date" ></td>
+            </tr>
+    
+    
+            <tr>
+                <td align="right">Birth Date:</td>
+                <td><input type="datetime-local"></td>
+            </tr>
+    
+            <tr>
+                <td align="right">Gender:</td>
+    
+                <td>
+    <input type="radio" name="x"   name="y"checked>Male  
+                    <input type="radio" name="x">Female
+                  
+                </td>
+    
+            </tr>
+    
+    
+            <tr>
+                <td align="right">Hobbies:</td>
+                <td>
+                    <input type="checkbox"> Cricket
+                    <input type="checkbox"> Music
+                    <input type="checkbox" checked> Badminton
+                    <input type="checkbox"> Cooking
+                </td>
+            </tr>
+    
+    
+            <tr>
+                <td align="right">Upload your image:</td>
+                <td><input type="file" multiple></td>
+            </tr>
+    
+    
+            <tr>
+                <td align="right">Address:</td>
+                <td>
+                    <textarea cols="30" rows="4"></textarea>
+                </td>
+            </tr>
+    
+            <tr>
+                <td align="right">Quantity:</td>
+                <td><input type="number" max="5" min="1"></td>
+            </tr>
+    
+            <tr>
+                <td align="right">Select Country:</td>
+                <td>
+                    <select>
+                        <option value="" hidden>---Select Country---</option>
+                        <option value="">India</option>
+                        <option value="">USA</option>
+                        <option value="" selected>India123</option>
+                        <option value="" disabled>UAE</option>
+                    </select>
+                </td>
+            </tr>
+    
+            <tr>
+                
+                <td colspan="2" align="center"><input type="submit" value="Register"></td>
+            </tr>
+        </table>
+
+    </form>
+
+
+    
+</body>
+</html>
