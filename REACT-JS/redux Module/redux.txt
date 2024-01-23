@@ -1,0 +1,154 @@
+                    MODULE: 13 React – Applying Redux
+
+
+
+
+=>  • What is Redux?
+ans =>  edux is an open-source JavaScript library for managing the state of an application in a predictable way. It is commonly used with React but can be integrated with any JavaScript framework or library.
+
+Redux consists of the following key components:
+
+Store: The central piece of Redux that holds the state of the application. It has methods for dispatching actions, subscribing to changes, and getting the current state.
+
+Actions: Plain JavaScript objects that describe what happened in the application. Actions must have a type property indicating the type of action being performed.
+
+Reducers: Pure functions that specify how the application's state changes in response to actions. Reducers take the current state and an action as arguments and return a new state.
+
+Middleware: Functions that provide a third-party extension point between dispatching an action and the moment it reaches the reducer. Middleware is commonly used for tasks like logging, asynchronous operations, and more.
+
+By adhering to these principles, Redux helps manage the complexity of state in larger applications and makes it easier to reason about how data changes over time. It's particularly useful when dealing with shared state in complex component hierarchies or when handling asynchronous operations.
+
+
+2.What is Redux Thunk used for?
+
+ans=> Redux Thunk is a middleware for Redux that allows you to write action creators that return functions instead of plain action objects. This enables you to perform asynchronous operations, such as making API calls, inside your action creators.
+
+However, when dealing with asynchronous operations, like fetching data from an API, you need a way to handle the asynchronous nature of the operation and dispatch multiple actions during its lifecycle. This is where Redux Thunk comes in.
+
+With Redux Thunk, you can create action creators that return functions. These functions can have access to the dispatch method, allowing you to dispatch actions at different points in the asynchronous operation.
+
+3.What is Pure Component? When to use Pure Component over Component?
+
+ans=> In React, a "Pure Component" refers to a specific type of React component that is optimized for performance by automatically implementing the shouldComponentUpdate lifecycle method with a shallow prop and state comparison. This optimization helps prevent unnecessary re-renders when the component's props or state haven't changed.
+
+
+
+Simple Props and State: Your component's props and state are simple, and a shallow comparison is sufficient to determine if a re-render is necessary.
+
+Performance Optimization: You want to optimize performance by avoiding unnecessary re-renders, especially in situations where rendering is computationally expensive.
+
+
+
+In React, a "Pure Component" refers to a specific type of React component that is optimized for performance by automatically implementing the shouldComponentUpdate lifecycle method with a shallow prop and state comparison. This optimization helps prevent unnecessary re-renders when the component's props or state haven't changed.
+
+Here's a brief overview:
+
+PureComponent:
+Automatic shouldComponentUpdate: A PureComponent automatically implements the shouldComponentUpdate method with a shallow prop and state comparison. It performs a shallow equality check on the props and state to determine whether the component needs to re-render.
+
+Shallow Comparison: A shallow comparison means that it checks whether the individual values in the props and state objects are the same by comparing their references, rather than deeply comparing their internal structures.
+
+Component:
+Manual shouldComponentUpdate: Regular React components (often referred to as "Class Components" or simply "Components") don't automatically implement shouldComponentUpdate. Developers need to manually define this method if they want to optimize the component's rendering.
+
+Default Behavior: The default behavior of shouldComponentUpdate in a regular component is to return true, which means the component will re-render whenever setState is called, regardless of whether the props or state have actually changed.
+
+When to use PureComponent over Component:
+Use PureComponent when:
+
+Simple Props and State: Your component's props and state are simple, and a shallow comparison is sufficient to determine if a re-render is necessary.
+
+Performance Optimization: You want to optimize performance by avoiding unnecessary re-renders, especially in situations where rendering is computationally expensive.
+
+Immutability: Your props and state are immutable, or you can ensure that they are not mutated. This is important because the shallow comparison relies on object references.
+
+Use Component when:
+
+Custom shouldComponentUpdate Logic: You need to implement custom logic in the shouldComponentUpdate method that involves a deep comparison of props or state.
+
+Fine-Grained Control: You want fine-grained control over the re-rendering process and don't want the automatic shallow comparison behavior provided by PureComponent.
+
+
+
+4.What is the second argument that can optionally be passed tosetState and what is
+its purpose?
+
+ans =>   The second argument that can optionally be passed to the setState function in React is a callback function. This callback function is executed once the state has been updated and the component has been re-rendered. Its purpose is to perform additional logic or tasks that should occur after the state update has taken place.
+
+5.Create a Table and Search data from table using React Js?
+
+ans=> 
+import logo from './logo.svg';
+import './App.css';
+// import { TestData } from './Users';
+import { useEffect, useState } from 'react';
+
+
+function App() {
+
+  const [query,setQuery] = useState("")
+
+  const [details,setDetails] = useState([])
+useEffect(()=>{
+  
+  fetch('https://jsonplaceholder.typicode.com/users')
+  .then((res)=>{return res.json()})
+  .then((data)=>{
+    setDetails(data)
+  })
+})
+
+
+  return (
+    <div className="App">
+
+      Search: 
+      <input value={query}
+
+      onChange={(e)=>{setQuery(e.target.value)}}
+      
+      
+      />
+
+     <ul>
+
+      {
+      
+      details.filter((items)=>items.username.toLowerCase().includes(query))
+      .map(item =>(
+        <li>{item.username}</li>
+      ))
+      
+      
+      
+      }
+
+      {/* {TestData.map(items =>(
+
+        <li>{items.name}</li>
+      ))} */}
+    
+      
+     </ul>
+  
+    </div>
+  );
+}
+
+export default App;
+
+
+
+6.Create Login registration with CRUD Application using API (Redux)
+
+ans=>  Creating a full-fledged Login, Registration, and CRUD application using React, Redux, and an API involves multiple components and files, making it a comprehensive task. Below is a simplified example to guide you. This example uses JSONPlaceholder, a fake online REST API for testing and prototyping.
+
+npm install react react-dom react-redux redux redux-thunk axios react-router-dom
+1. Set up Redux Store /src/store/index.js:
+2. Create API service /src/services/api.js:
+3. Auth Actions /src/actions/authActions.js:
+4. Post Actions /src/actions/postActions.js:
+5. Auth Reducer /src/reducers/authReducer.js:
+6. Post Reducer /src/reducers/postReducer.js:
+7. Components
+Now you can create your React components for Login, Registration, PostList, and PostForm.
