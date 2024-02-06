@@ -1,0 +1,218 @@
+            Module 6
+        JAVASCRIPT BASIC & DOM
+
+
+1. What is JavaScript. How to use it? 
+ans =>JavaScript is a scripting or programming language that allows you to implement complex features on web pages — every time a web page does more than just sit there and display static information for you to look at 
+
+2.How many type of Variable in JavaScript? 
+ans =>There are two types of variables in JavaScript : local variable and global variable. There are some rules while declaring a JavaScript variable (also known as identifiers
+
+3.Define a Data Types in js?
+ans =>Data types describe the different types or kinds of data that we're gonna be working with and storing in variables. In Javascript, there are five basic, or primitive, types of data. The five most basic types of data are strings, numbers, booleans, undefined, and null.
+
+
+4. Write a mul Function Which will Work Properly When invoked With Following Syntax. 
+ans =>	Here is a JavaScript function that will work properly when invoked with the following syntax:	
+
+
+5. What the deference between undefined and undeclare in JavaScript?
+ans =>In JavaScript, undefined and undeclared are two different concepts that can be confusing to beginners.
+Undefined
+Undefined is a primitive data type in JavaScript and represents the absence of a value, intentional or otherwise. For example, if you declare a variable but do not assign it a value, it will be undefined.
+
+6.6 Using console.log() print out the following statement: The quote 'There is no exercise
+better for the heart than reaching down and lifting people up.' by John Holmes teaches us to
+help one another. Using console.log() print out the following quote by Mother Teresa:
+
+ans =>
+Certainly! To print out the given quotes using console.log() in JavaScript, you can do the following:
+
+console.log("The quote 'There is no exercise better for the heart than reaching down and lifting people up.' by John Holmes teaches us to help one another.");
+console.log("The best way to find yourself is to lose yourself in the service of others. - Mother Teresa");
+When you run this code in a JavaScript environment (like a web browser console or Node.js), it will output the specified quotes.
+
+7. Check if typeof '10' is exactly equal to 10. If not make it exactly equal?
+ans =>In JavaScript, the typeof operator returns the type of a variable. So, typeof '10' will return 'string'. In order to check if typeof '10' is exactly equal to 10, we need to use the === (strict equality) operator. The === operator checks for both type and value equality, so '10' === 10 will return false.
+To make typeof '10' exactly equal to 10, we need to convert the string '10' to a number. We can do this using the parseInt() function. The parseInt() function takes a string as an argument and returns an integer. So, parseInt('10') will return 10.
+Therefore, the following code will make typeof '10' exactly equal to 10:
+
+8. Write a JavaScript Program to find the area of a triangle? 
+ans =>// Define the lengths of the three sides of a triangle
+const side1 = 5;
+const side2 = 6;
+const side3 = 7;
+
+// Calculate the semi-perimeter of the triangle
+const s = (side1 + side2 + side3) / 2;
+
+// Use Heron's formula to calculate the area of the triangle
+const area = Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
+
+// Log the calculated area to the console
+console.log(area);
+
+
+9.Write a JavaScript program to calculate days left until next Christmas? 
+ans =>function calculateDaysUntilChristmas() {
+  // Get today's date
+  const today = new Date();
+
+  // Create a date object for next Christmas
+  const christmas = new Date(today.getFullYear(), 11, 25);
+
+  // Calculate the difference in milliseconds between today and Christmas
+  const timeDifference = christmas.getTime() - today.getTime();
+
+  // Convert the time difference to days
+  const daysLeft = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+
+  // Return the number of days left until Christmas
+  return daysLeft;
+}
+
+// Get the number of days left until Christmas
+const daysLeft = calculateDaysUntilChristmas();
+
+// Log the number of days left to the console
+console.log(`There are ${daysLeft} days left until Christmas!`);
+
+10.What is Condition Statement?
+ans =>A conditional statement is a statement that can be written as "If P then Q," where P and Q are sentences. In this statement, P is called the hypothesis and Q is called the conclusion
+
+11 Find circumference of Rectangle formula : C = 4 * a ?
+ans =>#include<stdio.h>
+int main()
+{ float a , b, c, d ,perimeter;
+a= c= 5;
+b=d= 4;
+perimeter = 2*(a+b);
+printf("\n\n Perimeter of Rectangle is : %f",perimeter);
+return (0);
+
+12. WAP to convert years into days and days into years? 
+ans =>How do you convert days into years weeks and days?
+Number of years will be the quotient when number of days will be divided by 365 i.e days / 365 = years. Number of weeks will be the result of (Number_of_days % 365) / 7. Number of days will be the result of (Number_of_days % 365) % 7
+
+13. Convert temperature Fahrenheit to Celsius? (Conditional logic Question) 
+ans =>To convert Fahrenheit to Celsius, you can use the formula: 
+°C = (°F - 32) × 5/9 
+Here are the steps for converting Fahrenheit to Celsius:
+Subtract 32 from the Fahrenheit temperature
+Multiply the difference by 5
+Divide the product by 9 
+For example, to convert 98.6°F to Celsius, you can:
+Subtract 32 from 98.6
+Multiply 66.6 by 5
+Divide 333 by
+
+14. Write a JavaScript exercise to get the extension of a filename.? 
+ans =>function getExtension(filename) {
+  // Split the filename into an array using the "." character as the delimiter.
+  const parts = filename.split(".");
+
+  // Return the last element of the array, which is the file extension.
+  return parts[parts.length - 1];
+}
+
+// Example usage:
+const filename = "myfile.txt";
+const extension = getExtension(filename);
+
+console.log(extension); // "txt"
+
+15.What is the result of the expression (5 > 3 && 2 < 4)? 
+ans =>
+The expression (5 > 3 && 2 < 4) is a logical AND operation. It evaluates to true because both conditions are true:
+
+5 > 3 is true.
+2 < 4 is true.
+In a logical AND operation, the entire expression is true only if both conditions on either side of the && operator are true. Therefore, the result of the expression is true.
+
+16. What is the result of the expression (true && 1 && "hello")?
+ans =>The result of the expression (true && 1 && "hello") is true.
+The && operator is the logical AND operator. It returns true if both of its operands are true, and false otherwise. In this case, both true and 1 are true, so the expression evaluates to true.
+The "hello" operand is irrelevant, because the && operator will short-circuit the evaluation of the expression as soon as it encounters a false operand. This means that the "hello" operand will never be evaluated.
+Here is a breakdown of the expression:
+true && 1 && "hello"
+true && 1
+true
+Therefore, the result of the expression is true.
+
+17.What is the result of the expression true && false || false && true?
+ans =>First, we have the expression "true || false". This evaluates to true because the "||" operator means "or", so if either operand is true, the result is true. Next, we have "true && false". This evaluates to false because the "&&" operator means "and", so both operands must be true for the result to be true.
+
+18.What is a Loop and Switch Case in JavaScript define that ? 
+ans =>A for loop is a control structure that allows you to repeat a block of code a certain number of times, while a switch case is a control structure that allows you to execute different blocks of code based on the value of an expression.
+
+19.What is the use of is Nan function? 
+ans =>isNaN() returns true if a number is Not-a-Number. In other words: isNaN() converts the value to a number before testing it.
+
+20.What is the difference between && and || in JavaScript? 
+ans =>Difference between && and || and their opposites
+|| means “or”. It evaluates to true if the expression on either side is truthy. && means “and”
+
+21.What is the use of Void (0)? 
+ans =>What Does JavaScript Void 0 Mean? JavaScript void 0 means returning undefined (void) as a primitive value. You might come across the term “JavaScript:void(0)” while going through HTML documents. It is used to prevent any side effects caused while inserting an expression in a web page.
+
+22. Check Number Is Positive or Negative in JavaScript?
+ans =>sign() method retuns whether a number is negative, positive or zero. If the number is positive, this method returns 1. If the number is negative, it returns -1. If the number is zero, it returns 0.
+
+23.Find the Character Is Vowel or Not ?
+ans =>Here is a Python program to check whether a character is a vowel or not:
+x = input("Enter a character:")
+if x == "a" or x == "e" or x == "i" or x == "o" or x== "u" or x == "A" or x == "E" or x == "I" or x == "O" or x == "U":
+  print("The character entered is a vowel.")
+else:
+  print("The character entered is a consonant.")
+
+24. Write to check whether a number is negative, positive or zero? 
+ans =>A number is said negative if it is less than 0 i.e. num < 0 . A number is said positive if it is greater than 0 i.e. num > 0
+
+25. Write to find number is even or odd using ternary operator in JS?
+ans =>Ternary operator will have the Boolean Expressions (userInput % 2 == 0) this will be evaluated. If this statements (userInput % 2 == 0) returns true and this string ("number is even") will be return.
+
+26.Write find maximum number among 3 numbers using ternary operator in JS?
+ans =>In this code, we first prompt the user to enter three numbers, which are stored in variables a, b, and c. Then, we use nested ternary operators to compare the numbers and find the maximum of them. The expression (a > b and a > c) is evaluated first. If it is true, then a is the maximum number.
+
+27. Write to find minimum number among 3 numbers using ternary operator in JS?
+ans =>let num1 = 12; // First number let num2 = 7; // Second number let num3 = 18; // Third number let smallest; // Variable to store the smallest number // Employing conditional statements to compare the numbers and find the smallest if (num1 < num2 && num1 < num3) { smallest = num1; } else if (num2 < num1 && num2 < num3)
+
+28.Write to find the largest of three numbers in JS?
+ans =>let num1 = 42; // First number let num2 = 78; // Second number let num3 = 55; // Third number let largest; // To hold the largest number // Using conditional statements to compare the numbers and determine the largest if (num1 > num2 && num1 > num3) { largest = num1; } else if (num2 > num1 && num2 > num3)
+
+29.
+(i). Monday to Sunday using switch case in JS?
+ans =>Here is an example of how to use a switch case statement to print the day of the week in JavaScript:
+const day = new Date().getDay();
+
+switch (day) {
+  case 0:
+    console.log("Sunday");
+    break;
+  case 1:
+    console.log("Monday");
+    break;
+  case 2:
+    console.log("Tuesday");
+    break;
+  case 3:
+    console.log("Wednesday");
+    break;
+  case 4:
+    console.log("Thursday");
+    break;
+  case 5:
+    console.log("Friday");
+    break;
+  case 6:
+    console.log("Saturday");
+    break;
+  default:
+    console.log("Invalid day");
+}
+
+
+(ii).Vowel or Consonant using switch case in JS?
+ans =>
+eg : a is vowel. here is my code : <? php switch($vowel) { case 'a': echo "vowel";break; case 'e': echo "vowel";break case 'i': echo "vowel";break case 'o': echo "vowel";break case 'u': echo "vowel";break default: echo " this letter is consonant."; } ?> is it correct ? Thank you Lexus Collins.
